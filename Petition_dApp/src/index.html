@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>StandUpForChange</title>
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="images/petition.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="images/logo.png" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#page-top">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#petizioni">Petizioni</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#createpetitions">Crea una petizione</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#letuefirme"> Le tue firme</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container">
+            <div class="masthead-subheading">Together, we can make a difference</div>
+            <div class="masthead-heading text-uppercase">Stand Up for Change</div>
+            <a class="btn btn-primary btn-xl text-uppercase" href="#petizioni">Tell Me More</a>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid-->
+    <section class="page-section bg-light" id="petizioni">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">PETIZIONI</h2>
+                <h3 class="section-subheading text-muted">Firma oggi, cambia il domani.</h3>
+            </div>
+            <div id="petitionRow" class="row">
+                <!--PETITIONS LOAD HERE-->
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Templete-->
+    <div id="petitionTemplate" style="display: none;">
+        <div class="col-sm-6 col-md-4 col-lg-3" style="padding: 10px;">
+            <div class="portfolio-item">
+                <img class="img-fluid img" style="width: 350px; height: 230px;"
+                    src="https://www.sofidel.com/wp-content/uploads/2021/12/storia-plastica-soft-and-green-768x510.jpg" alt="..." />
+                <div class="portfolio-caption">
+                    <div class="portfolio-caption-heading category" style=" display: inline-block;padding: 3px 5px; border: 2px solid #000;border-radius: 20px;text-align: center;
+                 font-size: 13px;cursor: pointer;">Ambiente
+                    </div>
+                    <div class="portfolio-caption-heading title">Riduzione inquinamento nei parchi cittadini</div>
+                    <div class="portfolio-caption-subheading text-muted organizer">Associazione</div>
+                    <p></p>
+                    <strong>OBIETTIVO FIRME</strong>: <span class="targetSignatures">3000</span><br />
+                    <strong>NUMERO FIRME</strong>: <span class="numSignatures">5</span><br />
+                    <p></p>
+                    <button class="btn btn-warning btn-sign" type="button" data-id="0">Firma</button>
+                    <button class="btn btn-success" type="button" disabled>Completata</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Create Petition Grid-->
+    <section class="page-section" id="createpetitions">
+        <div class="container ">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">CREA UNA PETIZIONE</h2>
+                <h3 class="section-subheading text-muted">Condividi la tua causa!</h3>
+            </div>
+            <form id="createForm" data-sb-form-api-token="API_TOKEN">
+                <div class="row align-items-stretch mb-5" style="justify-content: center;">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <!-- Title input-->
+                            <label for="titleInput" class="section-heading text-uppercase"
+                                style="color: black; font-size: 1.3rem; ">TITOLO PETIZIONE</label>
+                            <input class="form-control" id="titleInput" type="text" placeholder="Title *" />
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <!-- Organizer input-->
+                            <label for="organizerInput" class="section-heading text-uppercase"
+                                style="color: black; font-size: 1.3rem; ">ORGANIZZATORE</label>
+                            <input class="form-control" id="organizerInput" type="text" placeholder="Organizzatore *" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <!-- Organizer input-->
+                            <label for="categoryInput" class="section-heading text-uppercase"
+                                style="color: black; font-size: 1.3rem; ">CATEGORIA</label>
+                            <input class="form-control" id="categoryInput" type="text" placeholder="Categoria *" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <!-- targetSignatures input-->
+                            <label for="targetSignaturesInput" class="section-heading text-uppercase"
+                                style="color: black; font-size: 1.3rem; ">OBIETTIVO FIRME</label>
+                            <input class="form-control" id="targetSignaturesInput" type="number"
+                                placeholder="Obiettivo firme *" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <div>
+                                <label for="imageInput" class="section-heading text-uppercase"
+                                    style="color: black; font-size: 1.3rem; ">LINK IMMAGINE</label>
+                                <input class="form-control form-control-lg" id="imageInput" type="text" placeholder="Link immagine">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        <!-- Creation Button-->
+        <div class="text-center">
+            <button class="btn btn-primary btn-xl text-uppercase btn-addPetition" type="submit">CREA
+            </button>
+        </div>
+        </form>
+        </div>
+    </section>
+    </div>
+
+    <!-- Portfolio Grid-->
+    <section class="page-section bg-light" id="letuefirme">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">LE TUE FIRME</h2>
+                <h3 class="section-subheading text-muted">Le tue firme, il tuo impatto: ecco cosa hai sostenuto</h3>
+                <div id="emptyImage" style="display: none; text-align: center;">
+                    <img src="images/nopetition.png" alt="Immagine vuota" style="width: 500px; height: 500px;">
+                    <h2 class="section-heading text-uppercase">Non hai ancora firmato nulla!</h2>
+                </div>
+            </div>
+            <div class="row" id="tablepetitionsigend">
+                <div class="col-12">
+                    <table class="table table-image table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">IMAGE</th>
+                                <th scope="col">TITOLO</th>
+                                <th scope="col">ORGANIZZATORE</th>
+                                <th scope="col">OBIETTIVO FIRME</th>
+                                <th scope="col">NUMERO FIRME</th>
+                                <th scope="col">STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="petitionSigned">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-start">Copyright &copy; Your Website 2023</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a class="link-dark text-decoration-none me-3" href="#!">Privacy Policy</a>
+                    <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+
+</body>
+
+</html>
